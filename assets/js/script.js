@@ -1,41 +1,23 @@
-$( document ).ready(function() {
-    var w = window.innerWidth;
 
-    if(w > 767){
-        $('#menu-jk').scrollToFixed();
-    }else{
-        $('#menu-jk').scrollToFixed();
-    }
-
-
-
-})
-
-
-
-$(document).ready(function(){
-
-    $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
-        
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
-    });
-    
-    if ($(".filter-button").removeClass("active")) {
-$(this).removeClass("active");
+function show_menu() {
+  $('#show_menuitems').addClass('active');
 }
-$(this).addClass("active");
 
+function hide_menu() {
+  $('#show_menuitems').removeClass('active');
+}
+// --------------------------------------
+
+$(document).ready(function() {
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+  items: 1,
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  autoplayTimeout: 10000,
+  autoplayHoverPause: true
+  });
 });
+
+// --------------------------------------
