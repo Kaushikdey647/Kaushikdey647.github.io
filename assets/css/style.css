@@ -515,8 +515,16 @@ section {
           #about .wrapper .right-wrapper ._yt_er_ol {
             padding: 0 .9375rem; } }
 
-.resume {
+.bg1 {
+  background: url(../images/background/slide-01.jpg) no-repeat center;
+}
+
+.bg2 {
+  
   background: url(../images/background/slide-02.jpg) no-repeat center;
+}
+
+.resume {
   background-size: cover;
   position: relative;
   overflow: hidden; }
